@@ -1,0 +1,7 @@
+commit: HEAD
+process_files: [Caudex-Regular.ttf.ttx, Caudex-Italic.ttf.ttx, Caudex-BoldItalic.ttf.ttx,
+  Caudex-Bold.ttf.ttx, src/Caudex-Regular.sfd, src/Caudex-Italic.sfd, src/Caudex-BoldItalic.sfd,
+  src/Caudex-Bold.sfd]
+pyftsubset: --notdef-outline --name-IDs=* --hinting
+subset: [latin]
+ttfautohint: -l 7 -r 28 -G 50 -x 13 -w "G"

@@ -1,0 +1,139 @@
+# Bake Begins!
+### (1 of 6) Copy sources
+$ cp -a /home/travis/build/fontdirectory/caudex/METADATA.json /home/travis/build/fontdirectory/caudex/builds/build
+$ cp -a /home/travis/build/fontdirectory/caudex/DESCRIPTION.en_us.html /home/travis/build/fontdirectory/caudex/builds/build
+$ cp -a /home/travis/build/fontdirectory/caudex/FONTLOG.txt /home/travis/build/fontdirectory/caudex/builds/build
+$ cp -a Caudex-Regular.ttf.ttx Caudex-Italic.ttf.ttx Caudex-BoldItalic.ttf.ttx Caudex-Bold.ttf.ttx src/Caudex-Regular.sfd src/Caudex-Italic.sfd src/Caudex-BoldItalic.sfd src/Caudex-Bold.sfd Caudex-Regular.ttf._p_r_e_p.ttx Caudex-Regular.ttf._p_o_s_t.ttx Caudex-Regular.ttf._n_a_m_e.ttx Caudex-Regular.ttf._m_a_x_p.ttx Caudex-Regular.ttf._l_o_c_a.ttx Caudex-Regular.ttf._k_e_r_n.ttx Caudex-Regular.ttf._h_m_t_x.ttx Caudex-Regular.ttf._h_h_e_a.ttx Caudex-Regular.ttf._h_e_a_d.ttx Caudex-Regular.ttf._g_l_y_f.ttx Caudex-Regular.ttf._g_a_s_p.ttx Caudex-Regular.ttf._c_m_a_p.ttx Caudex-Regular.ttf.O_S_2f_2.ttx Caudex-Regular.ttf.M_A_T_H_.ttx Caudex-Regular.ttf.GlyphOrder.ttx Caudex-Regular.ttf.G_S_U_B_.ttx Caudex-Regular.ttf.G_P_O_S_.ttx Caudex-Regular.ttf.G_D_E_F_.ttx Caudex-Regular.ttf.F_F_T_M_.ttx Caudex-Regular.ttf.D_S_I_G_.ttx Caudex-Italic.ttf._p_r_e_p.ttx Caudex-Italic.ttf._p_o_s_t.ttx Caudex-Italic.ttf._n_a_m_e.ttx Caudex-Italic.ttf._m_a_x_p.ttx Caudex-Italic.ttf._l_o_c_a.ttx Caudex-Italic.ttf._k_e_r_n.ttx Caudex-Italic.ttf._h_m_t_x.ttx Caudex-Italic.ttf._h_h_e_a.ttx Caudex-Italic.ttf._h_e_a_d.ttx Caudex-Italic.ttf._g_l_y_f.ttx Caudex-Italic.ttf._g_a_s_p.ttx Caudex-Italic.ttf._c_m_a_p.ttx Caudex-Italic.ttf.O_S_2f_2.ttx Caudex-Italic.ttf.M_A_T_H_.ttx Caudex-Italic.ttf.GlyphOrder.ttx Caudex-Italic.ttf.G_S_U_B_.ttx Caudex-Italic.ttf.G_P_O_S_.ttx Caudex-Italic.ttf.G_D_E_F_.ttx Caudex-Italic.ttf.F_F_T_M_.ttx Caudex-Italic.ttf.D_S_I_G_.ttx Caudex-BoldItalic.ttf._p_r_e_p.ttx Caudex-BoldItalic.ttf._p_o_s_t.ttx Caudex-BoldItalic.ttf._n_a_m_e.ttx Caudex-BoldItalic.ttf._m_a_x_p.ttx Caudex-BoldItalic.ttf._l_o_c_a.ttx Caudex-BoldItalic.ttf._k_e_r_n.ttx Caudex-BoldItalic.ttf._h_m_t_x.ttx Caudex-BoldItalic.ttf._h_h_e_a.ttx Caudex-BoldItalic.ttf._h_e_a_d.ttx Caudex-BoldItalic.ttf._g_l_y_f.ttx Caudex-BoldItalic.ttf._g_a_s_p.ttx Caudex-BoldItalic.ttf._c_m_a_p.ttx Caudex-BoldItalic.ttf.O_S_2f_2.ttx Caudex-BoldItalic.ttf.M_A_T_H_.ttx Caudex-BoldItalic.ttf.GlyphOrder.ttx Caudex-BoldItalic.ttf.G_S_U_B_.ttx Caudex-BoldItalic.ttf.G_P_O_S_.ttx Caudex-BoldItalic.ttf.G_D_E_F_.ttx Caudex-BoldItalic.ttf.F_F_T_M_.ttx Caudex-BoldItalic.ttf.D_S_I_G_.ttx Caudex-Bold.ttf._p_r_e_p.ttx Caudex-Bold.ttf._p_o_s_t.ttx Caudex-Bold.ttf._n_a_m_e.ttx Caudex-Bold.ttf._m_a_x_p.ttx Caudex-Bold.ttf._l_o_c_a.ttx Caudex-Bold.ttf._k_e_r_n.ttx Caudex-Bold.ttf._h_m_t_x.ttx Caudex-Bold.ttf._h_h_e_a.ttx Caudex-Bold.ttf._h_e_a_d.ttx Caudex-Bold.ttf._g_l_y_f.ttx Caudex-Bold.ttf._g_a_s_p.ttx Caudex-Bold.ttf._c_m_a_p.ttx Caudex-Bold.ttf.O_S_2f_2.ttx Caudex-Bold.ttf.M_A_T_H_.ttx Caudex-Bold.ttf.GlyphOrder.ttx Caudex-Bold.ttf.G_S_U_B_.ttx Caudex-Bold.ttf.G_P_O_S_.ttx Caudex-Bold.ttf.G_D_E_F_.ttx Caudex-Bold.ttf.F_F_T_M_.ttx Caudex-Bold.ttf.D_S_I_G_.ttx /home/travis/build/fontdirectory/caudex/builds/build/sources
+### (2 of 6) pyfontaine
+### (3 of 6) Run upstream tests
+$ bakery-lint.py upstream-repo sources
+$ fontaine --collections subsets --text /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Bold.ttf.ttx /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-BoldItalic.ttf.ttx /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Italic.ttf.ttx /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Regular.ttf.ttx /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Bold.sfd /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-BoldItalic.sfd /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Italic.sfd /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Regular.sfd > fontaine.txt
+pyfontaine error: u'hexdata'
+pyfontaine process has been failed
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_contours(): ERROR
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_points(): ERROR
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_test_prepolation_glyph_names(): ERROR
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_component(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_mark_to_mark(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_own_glyphs(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_bakery_yaml_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_copyright_notices_same_across_family(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_description_html_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_fontlog_txt_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_metadata_json_exists(): OK
+$ bakery-lint.py upstream-ttx Caudex-Bold.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): ERROR
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): ERROR
+$ bakery-lint.py upstream-ttx Caudex-BoldItalic.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): ERROR
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): ERROR
+$ bakery-lint.py upstream-ttx Caudex-Italic.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): ERROR
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): ERROR
+$ bakery-lint.py upstream-ttx Caudex-Regular.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): ERROR
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): ERROR
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): ERROR
+$ bakery-lint.py upstream Caudex-Bold.sfd
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_has_rupee(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A_a_glyph_instance(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_ended_ufo(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_folder(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_fsType_eq_1(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_it_exists(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_familyname_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_fullfontname_less_than_64_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_consistof_allowed_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_less_than_30_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_stylename_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_weight_value_range_between_250_and_900(): OK
+$ bakery-lint.py upstream Caudex-BoldItalic.sfd
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_has_rupee(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A_a_glyph_instance(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_ended_ufo(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_folder(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_fsType_eq_1(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_it_exists(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_familyname_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_fullfontname_less_than_64_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_consistof_allowed_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_less_than_30_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_stylename_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_weight_value_range_between_250_and_900(): OK
+$ bakery-lint.py upstream Caudex-Italic.sfd
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_has_rupee(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A_a_glyph_instance(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_ended_ufo(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_folder(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_fsType_eq_1(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_it_exists(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_familyname_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_fullfontname_less_than_64_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_consistof_allowed_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_less_than_30_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_stylename_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_weight_value_range_between_250_and_900(): OK
+$ bakery-lint.py upstream Caudex-Regular.sfd
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_has_rupee(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_A_a_glyph_instance(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_ended_ufo(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_folder(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_is_fsType_eq_1(): ERROR
+bakery_lint.tests.upstream.test_check_ufo_requirements.UfoOpenTest.test_it_exists(): ERROR
+Failed to find NameList: MUFI
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_familyname_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_fullfontname_less_than_64_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_consistof_allowed_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_postscriptname_less_than_30_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_stylename_less_than_32_chars(): OK
+bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations.TestUFOFontFamilyNamingTest.test_weight_value_range_between_250_and_900(): OK
+### (4 of 6) Convert sources to TTF
+$ ttx -d /home/travis/build/fontdirectory/caudex/builds/build /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Bold.ttf.ttx /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-BoldItalic.ttf.ttx /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Italic.ttf.ttx /home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Regular.ttf.ttx
+ERROR: BUILD FAILED
+strippedname:/home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Bold.sfd
+strippedname:/home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-BoldItalic.sfd
+strippedname:/home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Italic.sfd
+strippedname:/home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Regular.sfd
+Compiling "/home/travis/build/fontdirectory/caudex/builds/build/sources/Caudex-Bold.ttf.ttx" to "/home/travis/build/fontdirectory/caudex/builds/build/Caudex-Bold.ttf.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'prep' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'kern' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Parsing 'MATH' table...
